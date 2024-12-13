@@ -1,0 +1,109 @@
+.special-card {
+    --color: theme('colors.light');
+    --space: 10px;
+    --width: 50%;
+    --height: 25%;
+    --box-width: 40%;
+    --box-height: 12.5%;
+}
+
+.special-card::after,
+.special-card.top-right::after,
+.special-card.top-left::after,
+.special-card.bottom-left::after {
+    content: '';
+    position: absolute;
+    width: var(--width);
+    height: var(--height);
+    background: var(--color);
+}
+
+.special-card::after {
+    bottom: 0;
+    right: 0;
+}
+
+.special-card.top-right::after {
+    top: 0;
+    right: 0;
+    bottom: auto;
+}
+
+.special-card.top-left::after {
+    top: 0;
+    left: 0;
+    bottom: auto;
+}
+
+.special-card.bottom-left::after {
+    bottom: 0;
+    left: 0;
+}
+
+.special-card .box::after,
+.special-card .box::before {
+    content: '';
+    position: absolute;
+    width: var(--box-width);
+    height: var(--box-height);
+    background: transparent;
+    z-index: 1;
+}
+
+.special-card .box::after {
+    bottom: 0;
+    right: var(--width);
+    box-shadow: var(--space) var(--space) var(--color);
+}
+
+.special-card .box::before {
+    bottom: var(--height);
+    right: 0;
+    box-shadow: var(--space) var(--space) var(--color);
+}
+
+.special-card.top-right .box::after {
+    top: 0;
+    bottom: auto;
+    right: var(--width);
+    box-shadow: var(--space) calc(-1 * var(--space)) var(--color);
+}
+
+.special-card.top-right .box::before {
+    top: var(--height);
+    bottom: auto;
+    right: 0;
+    box-shadow: var(--space) calc(-1 * var(--space)) var(--color);
+}
+
+.special-card.top-left .box::after {
+    top: 0;
+    bottom: auto;
+    left: var(--width);
+    box-shadow: calc(-1 * var(--space)) calc(-1 * var(--space)) var(--color);
+}
+
+.special-card.top-left .box::before {
+    top: var(--height);
+    bottom: auto;
+    left: 0;
+    box-shadow: calc(-1 * var(--space)) calc(-1 * var(--space)) var(--color);
+}
+
+.special-card.bottom-left .box::after {
+    bottom: 0;
+    left: var(--width);
+    box-shadow: calc(-1 * var(--space)) var(--space) var(--color);
+}
+
+.special-card.bottom-left .box::before {
+    bottom: var(--height);
+    left: 0;
+    top: auto;
+    box-shadow: calc(-1 * var(--space)) var(--space) var(--color);
+}
+
+.special-card .cta {
+    width: calc(var(--width) - (var(--space) / 2));
+    height: calc(var(--height) - (var(--space) / 2));
+}
