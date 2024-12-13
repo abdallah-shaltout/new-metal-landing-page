@@ -35,11 +35,7 @@
                 />
             </div>
         </div>
-        <LazyAppDialog
-            v-model="showVideo"
-            content-class="w-nine "
-            animate-from="bottom"
-        >
+        <LazyAppDialog v-model="showVideo" animate-from="bottom">
             <div class="rounded-lg w-full p-5 sm:p-2 bg-light shadow-xl">
                 <button
                     @click="showVideo = false"
