@@ -78,7 +78,6 @@ export default defineNuxtConfig({
 
         strategy: 'prefix_except_default',
         defaultLocale: 'ar',
-
         vueI18n: './app/config/i18n.config.ts',
     },
     image: {

@@ -40,7 +40,7 @@
                             playsinline
                             class="w-full h-full object-contain"
                         >
-                            <source src="/videos/Video.mp4" type="video/mp4" />
+                            <source src="/videos/Video.webm" type="video/webm" />
                         </video>
                     </div>
                 </div>
