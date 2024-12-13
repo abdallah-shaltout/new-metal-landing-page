@@ -37,7 +37,7 @@
         </div>
         <LazyAppDialog
             v-model="showVideo"
-            content-class="w-nine"
+            content-class="w-nine "
             animate-from="bottom"
         >
             <div class="rounded-lg w-full p-5 sm:p-2 bg-light shadow-xl">
@@ -48,7 +48,10 @@
                     <NuxtIcon name="close" class="text-4xl" />
                 </button>
 
-                <video controls class="w-full aspect-video rounded-xl">
+                <video
+                    controls
+                    class="w-full aspect-video max-w-6xl rounded-xl"
+                >
                     <source src="/videos/new-metal.mp4" type="video/mp4" />
                 </video>
             </div>
